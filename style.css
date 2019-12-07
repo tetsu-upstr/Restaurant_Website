@@ -3,10 +3,6 @@ html {
   font-size: 100%;
 }
 
-body {
-  font-family: 'Raleway', 'Sawarabi Mincho',  sans-serif;
-}
-
 a {
   text-decoration: none;
 }
@@ -26,7 +22,7 @@ img {
 
 .big-bg {
   position: relative; /* 配置：親要素 */
-  background-size: cover;
+  width: 100%; 
   background-position: center top;
   background-repeat: no-repeat;
 }
@@ -45,29 +41,41 @@ img {
 
 .main-nav {
   display: flex;
-  font-size: 1.25rem;
-  text-transform: uppercase;
-  margin-top: 34px;
+  font-size: 1.1rem;
+  margin-top: 48px;
   list-style: none;
 }
 
 .main-nav li{
   margin-left: 32px;
+  font-family: 'Caveat Brush', cursive;
 }
 
 .main-nav a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.main-nav a:hover {
-  color: #0bd
+  color: #103942;  
 }
 
 .page-header {
   display: flex;
   justify-content: space-between;
 }
+
+/* navi animation */
+
+.main-nav a::after {
+  border-bottom: solid 2px #103942;
+  bottom: 0;
+  content: "";
+  display: block;
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  width: 0;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
 
 /* HOME */
 
@@ -83,13 +91,13 @@ img {
  
 .sentence {
   position: absolute; /* 配置：子要素 */
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform : translate(-50%,-50%);
   font-size: 1.125rem;
   color: #fff;
-  margin: 10px 0 42px;
-  background-color: rgba(13, 44, 12, 0.58);
+  font-family: 'Noto Serif JP', serif;
+  background-color: rgba(16, 57, 66, 0.3);
   border-radius: 8px;
 }
 
@@ -97,11 +105,37 @@ img {
 /* footer */
 
 footer {
-  background: #004c40;
   text-align: center;
   padding: 26px 0;
 }
+
 footer p {
-  color: #fff;
+  color: #103942;
   font-size: 0.875rem;
 }
+
+.circle {
+  display: inline-block; 
+  height:50px;
+  width:50px;
+  border-radius:50%;
+  line-height:50px;
+  text-align:center;
+  margin-left: 8px;
+  background-color: #fff;
+  -webkit-filter:drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
+  -moz-filter:drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
+  -ms-filter:drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
+  filter:drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
+ }
+
+ .circle:hover {
+  transform: translateY(-0.25em);
+ }
+
+ .icon {
+   color: black;
+ }
+
+
+
