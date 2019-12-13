@@ -3,8 +3,16 @@ html {
   font-size: 100%;
 }
 
+body {
+  margin: 0px;
+}
+
 a {
   text-decoration: none;
+}
+
+p {
+  font-family: 'Noto Serif JP', serif;
 }
 
 img {
@@ -23,6 +31,7 @@ img {
 .big-bg {
   position: relative; /* 配置：親要素 */
   width: 100%; 
+  margin: 0;
   background-position: center top;
   background-repeat: no-repeat;
 }
@@ -79,19 +88,21 @@ a:hover::after {
 
 /* HOME */
 
-.home-content .menu-content {
+.home-content {
   text-align: center;
   margin-top: 10%;
 }
 
 .page-title {
+  font-family: 'Noto Serif JP', serif;
   font-weight: bold;
   font-size: 2em;
+  margin: 0;
 }
  
 .sentence {
   position: absolute; /* 配置：子要素 */
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform : translate(-50%,-50%);
   font-size: 1.125rem;
@@ -101,6 +112,107 @@ a:hover::after {
   border-radius: 8px;
 }
 
+/* map */
+
+#location .wrapper {
+  margin-top: 48px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.location-info {
+  width: 22%;
+}
+.location-info p {
+  padding: 12px 10px;
+  text-align: left;
+  color: black;
+}
+.location-map {
+  width: 74%;
+}
+
+/* Menu */
+
+.menu-content {
+  text-align: center;
+  font-size: 24px;
+}
+
+
+.grid {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top: 6%;
+  margin-bottom: 50px;
+}
+
+.item img {
+  height: 300px;
+	width: 300px;
+   object-fit: cover; /* 画像トリミング */
+}
+
+/* contact */
+
+/* フォーム */
+form div {
+  margin-bottom: 14px;
+  font-family: 'Noto Serif JP', serif;
+}
+.wrapper > form {
+  text-align: left;
+  margin-left: 200px;
+}
+
+label {
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+  display: block;
+}
+input[type="text"],
+input[type="email"],
+input[type="message-title"],
+textarea {
+  background: rgba(255,255,255,.5);
+  border: 1px rgb(190, 189, 189) solid;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+}
+input[type="text"],
+input[type="email"],
+input[type="message-title"] {
+  width: 100%;
+  max-width: 240px;
+}
+textarea {
+  width: 100%;
+  max-width: 480px;
+  height: 6rem;
+}
+input[type="submit"] {
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* ボタン */
+.button {
+  font-size: 1.2rem;
+  font-family: 'Noto Serif JP', serif;
+  background: rgb(233, 237, 238);
+  color: #103942;
+  border-radius: 5px;
+  padding: 8px 24px;
+  margin-right: 8px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+.button:hover {
+  background: #b3babb;
+  color: #fff;
+}
 
 /* footer */
 
