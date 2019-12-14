@@ -26,6 +26,10 @@ img {
   text-align: center;
 }
 
+label {
+  color: #4C4C4C;
+}
+
 /* background image */
 
 .big-bg {
@@ -44,24 +48,28 @@ img {
 /* header */
 
 .logo {
-  width: 150px;
-  margin-top: 8px;
+  width: 120px;
+}
+
+h1 {
+  margin: 0;
 }
 
 .main-nav {
   display: flex;
   font-size: 1.1rem;
-  margin-top: 48px;
+  margin-top: 32px;
   list-style: none;
 }
 
 .main-nav li{
   margin-left: 32px;
-  font-family: 'Caveat Brush', cursive;
+  font-family: 'Jaldi', sans-serif;
+  color: #4C4C4C;  
 }
 
 .main-nav a {
-  color: #103942;  
+  color: #4C4C4C;  
 }
 
 .page-header {
@@ -72,7 +80,7 @@ img {
 /* navi animation */
 
 .main-nav a::after {
-  border-bottom: solid 2px #103942;
+  border-bottom: solid 2px #4C4C4C;
   bottom: 0;
   content: "";
   display: block;
@@ -97,7 +105,9 @@ a:hover::after {
   font-family: 'Noto Serif JP', serif;
   font-weight: bold;
   font-size: 2em;
+  color: #fff;
   margin: 0;
+  letter-spacing: 3px;
 }
  
 .sentence {
@@ -126,17 +136,22 @@ a:hover::after {
 .location-info p {
   padding: 12px 10px;
   text-align: left;
-  color: black;
+  color: #4C4C4C;
 }
-.location-map {
+.google-map {
   width: 74%;
 }
 
 /* Menu */
 
 .menu-content {
+  color: #4C4C4C;  
   text-align: center;
-  font-size: 24px;
+  font-size: 12px;
+}
+
+.menu-title {
+  font-size: 16px;
 }
 
 
@@ -150,13 +165,35 @@ a:hover::after {
 
 .item img {
   height: 300px;
-	width: 300px;
-   object-fit: cover; /* 画像トリミング */
+  width: 300px;
+  -webkit-filter:drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.5));
+  -moz-filter:drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.5));
+  -ms-filter:drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.5));
+  filter:drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.5));
+  object-fit: cover; /* 画像トリミング */
 }
 
-/* contact */
+.item img:hover {
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+  transform: translateY(-10px);
+  transition-duration: 0.5s;
+}
 
-/* フォーム */
+/* contact form  */
+
+.form-wrapper {
+  width: 100%;
+  margin: 0 5px;
+  color: #4C4C4C;
+  text-align: center;
+}
+
+.contact-title {
+  font-family: 'Noto Serif JP', serif;
+  color: #4C4C4C;
+}
+
+
 form div {
   margin-bottom: 14px;
   font-family: 'Noto Serif JP', serif;
@@ -202,16 +239,15 @@ input[type="submit"] {
 .button {
   font-size: 1.2rem;
   font-family: 'Noto Serif JP', serif;
-  background: rgb(233, 237, 238);
-  color: #103942;
+  background: #f7f7f7;
+  color: #4C4C4C;
   border-radius: 5px;
   padding: 8px 24px;
   margin-right: 8px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
 }
 .button:hover {
-  background: #b3babb;
-  color: #fff;
+  cursor: pointer;
 }
 
 /* footer */
@@ -222,8 +258,9 @@ footer {
 }
 
 footer p {
-  color: #103942;
+  font-family: 'Jaldi', sans-serif;
   font-size: 0.875rem;
+  color: #4C4C4C;
 }
 
 .circle {
@@ -242,12 +279,122 @@ footer p {
  }
 
  .circle:hover {
-  transform: translateY(-0.25em);
+  transform: translateY(-0.5em);
+  transition-duration: 0.5s;
  }
 
  .icon {
-   color: black;
+   color: #4C4C4C;
  }
 
+/* error messeage */
 
+textarea[name=contact] {
+	padding: 5px 10px;
+	width: 60%;
+	height: 100px;
+	font-size: 86%;
+	border: none;
+	border-radius: 3px;
+	background: #ddf0ff;
+}
+
+.error_list {
+	padding: 10px 30px;
+	color: #ff2e5a;
+	font-size: 86%;
+	text-align: left;
+	border: 1px solid #ff2e5a;
+	border-radius: 5px;
+}
+
+/* smart phone
+------------------------------- */
+@media (max-width: 600px) {
+  .page-title {
+      font-size: 2.5rem;
+  }
+  .page-header {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  /* HEADER */
+  .main-nav {
+      font-size: 1rem;
+      margin-top: 10px;
+      padding: 0;
+  }
+  .main-nav li {
+      margin: 0 20px;
+  }
+
+  .tel {
+    display: none;
+  }
+
+  /* HOME */
+  .home-content {
+      margin-top: 40%;
+  }
+  .page-title {
+    font-size: 4vw;
+    letter-spacing: 0.5px;
+  }
+  .sentence {
+    font-size: 3vw;
+  }
+
+  /* MENU */
+  .menu-content {
+      margin-top: 5%;
+  }
+
+  /* CONTACT */
+  #contact .contact-title {
+      margin-top: 40px;
+  }
+
+  .form-wrapper {
+    width: 300px;
+  }
+
+  /* form */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+      max-width: 100%;
+  }
+
+  /* map */
+  #location .wrapper {
+    margin: 0 auto;
+    flex-direction: column;
+   
+  }
+  .location-info {
+    width: 100%;
+    height:250px;
+  }
+
+  .google-map {
+    position: relative;
+    padding-bottom: 75%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .google-map iframe, 
+  .google-map object, 
+  .google-map embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+}
 
