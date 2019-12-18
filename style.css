@@ -40,7 +40,7 @@ label {
   background-repeat: no-repeat;
 }
 
-#home {
+.home {
   background-image: url(images/main-bg.jpg);
   min-height: 100vh;
 }
@@ -124,7 +124,7 @@ a:hover::after {
 
 /* map */
 
-#location .wrapper {
+.location .wrapper {
   margin-top: 48px;
   display: flex;
   justify-content: space-between;
@@ -338,8 +338,8 @@ textarea[name=contact] {
       margin-top: 40%;
   }
   .page-title {
-    font-size: 4vw;
-    letter-spacing: 0.5px;
+    font-size: 3vw;
+    letter-spacing: 0.2px;
   }
   .sentence {
     font-size: 3vw;
@@ -351,9 +351,6 @@ textarea[name=contact] {
   }
 
   /* CONTACT */
-  #contact .contact-title {
-      margin-top: 40px;
-  }
 
   .form-wrapper {
     width: 300px;
@@ -367,7 +364,7 @@ textarea[name=contact] {
   }
 
   /* map */
-  #location .wrapper {
+  .location .wrapper {
     margin: 0 auto;
     flex-direction: column;
    
