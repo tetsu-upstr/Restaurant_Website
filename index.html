@@ -33,9 +33,9 @@
 
         <div class="home-content sentence wrapper">
           <div class="box-mask">
-            <img src="images/logo-white.png" alt="demo logo">
-            <h2 class="page-title">美味しさへのこだわり</h2>
-            <p>当レストランいつも新鮮な食材をお客様に提供できるよう、できる限り生産者直送にこだわっています。野菜はもちろん、天然魚も産地が特定されているものを使用しています。</p>
+            <img id="top-logo" class="logo-white" src="images/logo-white.png" alt="demo logo">
+            <h2 id="top-title" class="page-title">美味しさへのこだわり</h2>
+            <p id="top-p" class="top-sentence">当レストランいつも新鮮な食材をお客様に提供できるよう、できる限り生産者直送にこだわっています。野菜はもちろん、天然魚も産地が特定されているものを使用しています。</p>
           </div>
         </div>
       
@@ -82,6 +82,37 @@
         <p><small>&copy; Demo restaurant site</small></p>
 
     </footer>
-  
+
+    <p id="top" class="top-button"><a href="#wrap">page top<br><i class="fas fa-angle-up fa-3x"></i></a></p>
+
+    <script src="http://code.jquery.com/jquery-1.12.1.min.js"></script>
+    <script>
+      $(function() {
+        $('#top-logo').fadeIn(800);
+        $('#top-title').fadeIn(800);
+        $('#top-p').fadeIn(800);
+      });
+
+      $(function() {
+        var topBtn = $('#top');    
+        topBtn.hide();
+        //スクロールが100に達したらボタン表示
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                topBtn.fadeIn();
+            } else {
+                topBtn.fadeOut();
+            }
+        });
+        //スクロールしてトップ
+        topBtn.click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 500);
+            return false;
+        });
+      });
+
+    </script>
 </body>
 </html>

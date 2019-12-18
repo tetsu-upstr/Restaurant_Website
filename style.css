@@ -101,6 +101,14 @@ a:hover::after {
   margin-top: 10%;
 }
 
+.logo-white {
+  display:none;
+}
+
+.top-sentence {
+  display:none;
+}
+
 .page-title {
   font-family: 'Noto Serif JP', serif;
   font-weight: bold;
@@ -108,6 +116,7 @@ a:hover::after {
   color: #fff;
   margin: 0;
   letter-spacing: 3px;
+  display:none;
 }
  
 .sentence {
@@ -248,6 +257,28 @@ input[type="submit"] {
 }
 .button:hover {
   cursor: pointer;
+}
+
+.top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 77%;
+}
+.top-button a {
+  font-family: 'Jaldi', sans-serif;
+  background: #666;
+  text-decoration: none;
+  color: #fff;
+  width: 100px;
+  padding: 10px 0;
+  text-align: center;
+  display: block;
+  border-radius: 5px;
+}
+.top-button a:hover {
+  text-decoration: none;
+  background: #999;
 }
 
 /* footer */
