@@ -4,15 +4,17 @@ html {
 }
 
 body {
-  margin: 0px;
+  margin: 0;
 }
 
 a {
   text-decoration: none;
+  color: #4C4C4C; 
 }
 
-p {
+h1, h2, h3, p, label {
   font-family: 'Noto Serif JP', serif;
+  color: #4C4C4C;  
 }
 
 img {
@@ -26,27 +28,17 @@ img {
   text-align: center;
 }
 
-label {
-  color: #4C4C4C;
-}
-
 /* background image */
-
 .big-bg {
-  position: relative; /* 配置：親要素 */
   width: 100%; 
   margin: 0;
   background-position: center top;
   background-repeat: no-repeat;
-}
-
-.home {
   background-image: url(images/main-bg.jpg);
   min-height: 100vh;
 }
 
 /* header */
-
 .logo {
   width: 120px;
 }
@@ -68,17 +60,12 @@ h1 {
   color: #4C4C4C;  
 }
 
-.main-nav a {
-  color: #4C4C4C;  
-}
-
 .page-header {
   display: flex;
   justify-content: space-between;
 }
 
 /* navi animation */
-
 .main-nav a::after {
   border-bottom: solid 2px #4C4C4C;
   bottom: 0;
@@ -95,40 +82,40 @@ a:hover::after {
 
 
 /* HOME */
-
-.home-content {
-  text-align: center;
-  margin-top: 10%;
-}
-
-.logo-white {
-  display:none;
-}
-
-.top-sentence {
-  display:none;
+.lead .wrapper{
+  display: flex;
+  margin: 30px auto;
 }
 
 .page-title {
-  font-family: 'Noto Serif JP', serif;
   font-weight: bold;
   font-size: 2em;
-  color: #fff;
-  margin: 0;
   letter-spacing: 3px;
-  display:none;
+  text-align: center;
+  margin: 50px auto;
+  /* display:none; */
 }
- 
+
+.sub-title {
+  font-size: 1.5em;
+}
+
+.top-sentence {
+  line-height: 30px;
+  margin: 35px 35px;  
+  /* display:none; */
+}
+
+.lead-img {
+  min-width: 500px;
+}
+
 .sentence {
   position: absolute; /* 配置：子要素 */
   top: 30%;
   left: 50%;
   transform : translate(-50%,-50%);
   font-size: 1.125rem;
-  color: #fff;
-  font-family: 'Noto Serif JP', serif;
-  background-color: rgba(16, 57, 66, 0.3);
-  border-radius: 8px;
 }
 
 /* map */
@@ -197,16 +184,10 @@ a:hover::after {
   text-align: center;
 }
 
-.contact-title {
-  font-family: 'Noto Serif JP', serif;
-  color: #4C4C4C;
-}
-
-
 form div {
   margin-bottom: 14px;
-  font-family: 'Noto Serif JP', serif;
 }
+
 .wrapper > form {
   text-align: left;
   margin-left: 200px;
@@ -255,10 +236,12 @@ input[type="submit"] {
   margin-right: 8px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 .button:hover {
   cursor: pointer;
 }
 
+/* page top ボタン */
 .top-button {
   position: fixed;
   bottom: 20px;
@@ -291,7 +274,6 @@ footer {
 footer p {
   font-family: 'Jaldi', sans-serif;
   font-size: 0.875rem;
-  color: #4C4C4C;
 }
 
 .circle {
