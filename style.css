@@ -28,14 +28,10 @@ img {
   text-align: center;
 }
 
-/* background image */
+/* top image */
 .big-bg {
   width: 100%; 
-  margin: 0;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-image: url(images/main-bg.jpg);
-  min-height: 100vh;
+  margin: 0 auto;
 }
 
 /* header */
@@ -87,6 +83,10 @@ a:hover::after {
   margin: 30px auto;
 }
 
+.reverse {
+  flex-flow: row-reverse;
+}
+
 .page-title {
   font-weight: bold;
   font-size: 2em;
@@ -96,26 +96,18 @@ a:hover::after {
   /* display:none; */
 }
 
+/* .lead-img {
+  width: 400px;
+} */
+
 .sub-title {
   font-size: 1.5em;
 }
 
 .top-sentence {
   line-height: 30px;
-  margin: 35px 35px;  
+  margin: 35px;  
   /* display:none; */
-}
-
-.lead-img {
-  min-width: 500px;
-}
-
-.sentence {
-  position: absolute; /* 配置：子要素 */
-  top: 30%;
-  left: 50%;
-  transform : translate(-50%,-50%);
-  font-size: 1.125rem;
 }
 
 /* map */
@@ -321,8 +313,7 @@ textarea[name=contact] {
 	border-radius: 5px;
 }
 
-/* smart phone
-------------------------------- */
+/* smart phone */
 @media (max-width: 600px) {
   .page-title {
       font-size: 2.5rem;
@@ -347,15 +338,36 @@ textarea[name=contact] {
   }
 
   /* HOME */
+  
   .home-content {
       margin-top: 40%;
   }
+
+  .lead .wrapper{
+    max-width: 100%;
+    flex-direction: column;
+  }
+
   .page-title {
     font-size: 3vw;
     letter-spacing: 0.2px;
   }
-  .sentence {
-    font-size: 3vw;
+
+  .sub-title {
+    font-size: 0.5em;
+  }
+  
+  .top-sentence {
+    font-size: 0.5em;
+    line-height: 15px;
+    margin: 20px;  
+    /* display:none; */
+  }
+  
+  .lead-img {
+    width:100%;
+    max-width: 100%;
+    height: auto;
   }
 
   /* MENU */
