@@ -3,10 +3,13 @@ html {
   font-size: 100%;
 }
 
+<<<<<<< HEAD
 body {
   margin: 0;
 }
 
+=======
+>>>>>>> origin/master
 a {
   text-decoration: none;
   color: #4C4C4C; 
@@ -30,8 +33,13 @@ img {
 
 /* background image */
 .big-bg {
+<<<<<<< HEAD
   width: 100%; 
   margin: 0;
+=======
+  position: relative; /* 配置：親要素 */
+  width: 100%; 
+>>>>>>> origin/master
   background-position: center top;
   background-repeat: no-repeat;
   background-image: url(images/main-bg.jpg);
@@ -50,12 +58,17 @@ h1 {
 .main-nav {
   display: flex;
   font-size: 1.1rem;
+<<<<<<< HEAD
   margin-top: 32px;
+=======
+  margin-top: 48px;
+>>>>>>> origin/master
   list-style: none;
 }
 
 .main-nav li{
   margin-left: 32px;
+<<<<<<< HEAD
   font-family: 'Jaldi', sans-serif;
   color: #4C4C4C;  
 }
@@ -74,12 +87,40 @@ h1 {
   transition: all .3s ease;
   -webkit-transition: all .3s ease;
   width: 0;
+=======
+  font-family: 'Caveat Brush', cursive;
+}
+
+.main-nav a {
+  color: #103942;  
+>>>>>>> origin/master
 }
 
 a:hover::after {
   width: 100%;
 }
 
+<<<<<<< HEAD
+=======
+/* navi animation */
+
+.main-nav a::after {
+  border-bottom: solid 2px #103942;
+  bottom: 0;
+  content: "";
+  display: block;
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  width: 0;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+
+/* HOME */
+>>>>>>> origin/master
 
 /* HOME */
 .lead .wrapper{
@@ -112,10 +153,21 @@ a:hover::after {
 
 .sentence {
   position: absolute; /* 配置：子要素 */
+<<<<<<< HEAD
   top: 30%;
   left: 50%;
   transform : translate(-50%,-50%);
   font-size: 1.125rem;
+=======
+  top: 50%;
+  left: 50%;
+  transform : translate(-50%,-50%);
+  font-size: 1.125rem;
+  color: #fff;
+  font-family: 'Noto Serif JP', serif;
+  background-color: rgba(16, 57, 66, 0.3);
+  border-radius: 8px;
+>>>>>>> origin/master
 }
 
 /* map */
@@ -272,7 +324,11 @@ footer {
 }
 
 footer p {
+<<<<<<< HEAD
   font-family: 'Jaldi', sans-serif;
+=======
+  color: #103942;
+>>>>>>> origin/master
   font-size: 0.875rem;
 }
 
@@ -292,6 +348,7 @@ footer p {
  }
 
  .circle:hover {
+<<<<<<< HEAD
   transform: translateY(-0.5em);
   transition-duration: 0.5s;
  }
@@ -407,4 +464,14 @@ textarea[name=contact] {
   }
 
 }
+=======
+  transform: translateY(-0.25em);
+ }
+
+ .icon {
+   color: black;
+ }
+
+
+>>>>>>> origin/master
 
