@@ -13,7 +13,21 @@
 </head>
 
 <body>
+
+    <header class="header">
+        <i class="fas fa-bars header__icon"></i>
+    </header>
       
+      <aside class="sidebar">
+        <div class="sidebar__inner">
+          <h2 class="sidebar__ttl">Site Menu</h2>
+          <i class="fas fa-times-circle sidebar__icon"></i>
+        </div>
+        <p class="sidebar__txt"><a href="index.html">Home</a></p>
+        <p class="sidebar__txt"><a href="menu.html">Menu</a></p>
+        <p class="sidebar__txt"><a href="contact.php">Contact</a></p>
+      </aside>
+      <div class="sidebar-bg"></div>
     
       <div class="wrapper">
         <header class="page-header">
@@ -40,8 +54,8 @@
       <section class="lead">
         <div class="wrapper">
           <div class="lead-sentence">
-            <h3 id="top-title" class="sub-title">美味しさへのこだわり</h3>
-            <p id="top-p" class="top-sentence">当レストランいつも新鮮な食材をお客様に提供できるよう、できる限り生産者からの直送にこだわっています。野菜はもちろん、天然魚も産地が特定されているものを使用しています。</p>
+            <h3 id="top-title" class="sub-title">快適な空間</h3>
+            <p id="top-p" class="top-sentence">当店はお客様におくつろぎ頂けるよう、チェア、食器、BGMなど細部にこだわり居心地の良い空間を提供します。</p>
           </div>
           <div class="lead-img">
             <img src="images/coffee.png" alt="コーヒー豆">
@@ -53,7 +67,7 @@
           <div class="wrapper reverse">
             <div class="lead-sentence">
               <h3 id="top-title" class="sub-title">美味しさへのこだわり</h3>
-              <p id="top-p" class="top-sentence">当レストランいつも新鮮な食材をお客様に提供できるよう、できる限り生産者からの直送にこだわっています。野菜はもちろん、天然魚も産地が特定されているものを使用しています。</p>
+              <p id="top-p" class="top-sentence">当店はいつも新鮮な食材をお客様に提供できるよう、できる限り生産者からの直送にこだわっています。野菜はもちろん、天然魚も産地が特定されているものを使用しています。</p>
             </div>
             <div class="lead-img">
                   <img src="images/pasta.png" alt="パスタ">
@@ -106,10 +120,54 @@
 
     </footer>
 
+   
+
     <p id="top" class="top-button"><a href="#wrap">page top<br><i class="fas fa-angle-up fa-3x"></i></a></p>
 
     <script src="http://code.jquery.com/jquery-1.12.1.min.js"></script>
     <script>
+
+      // ハンバーガーボタン
+      jQuery(document).ready(function(){
+      /*open*/
+      $('.header__icon').on('click',function(){
+        $('.sidebar').css(
+          'display','block'
+        ).animate({
+          left:'0'
+        }, 
+          300
+        );
+        $('.sidebar-bg').css(
+          'display','block'
+        ).animate({
+          opacity:'0.5'
+        },
+          300
+        )
+      });
+      /*close*/
+      $('.sidebar__icon').on('click',function(){
+        $('.sidebar').animate({
+          left:'-200px'
+        },
+          300
+        );
+        $('.sidebar-bg').animate({
+          opacity:'0'
+        },
+          300
+        );
+        setTimeout(function(){
+          $('.sidebar').css('display','none');
+          $('.sidebar-bg').css('display','none');
+        },
+          300
+        );
+      });
+    });
+
+      // スクロールボタン
       $(function() {
         $('#top-logo').fadeIn(800);
         $('#top-title').fadeIn(800);
