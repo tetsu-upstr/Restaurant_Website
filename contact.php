@@ -123,6 +123,21 @@ if( !empty($_POST) ) {
   <title>demo restaurant</title>
 </head>
 
+<header class="header">
+                <i class="fas fa-bars header__icon"></i>
+        </header>
+              
+        <aside class="sidebar">
+            <div class="sidebar__inner">
+                <h2 class="sidebar__ttl">Site Menu</h2>
+                <i class="fas fa-times-circle sidebar__icon"></i>
+            </div>
+            <p class="sidebar__txt"><a href="index.html">Home</a></p>
+            <p class="sidebar__txt"><a href="menu.html">Menu</a></p>
+            <p class="sidebar__txt"><a href="contact.php">Contact</a></p>
+        </aside>
+        <div class="sidebar-bg"></div>
+
 <body>
     
       <div class="wrapper">
@@ -248,6 +263,54 @@ if( !empty($_POST) ) {
         <p><small>&copy; Demo restaurant site</small></p>
 
     </footer>
+
+    
+
+    <script src="http://code.jquery.com/jquery-1.12.1.min.js"></script>
+    <script>
+
+      // ハンバーガーボタン
+      jQuery(document).ready(function(){
+      /*open*/
+      $('.header__icon').on('click',function(){
+        $('.sidebar').css(
+          'display','block'
+        ).animate({
+          left:'0'
+        }, 
+          300
+        );
+        $('.sidebar-bg').css(
+          'display','block'
+        ).animate({
+          opacity:'0.5'
+        },
+          300
+        )
+      });
+      /*close*/
+      $('.sidebar__icon').on('click',function(){
+        $('.sidebar').animate({
+          left:'-200px'
+        },
+          300
+        );
+        $('.sidebar-bg').animate({
+          opacity:'0'
+        },
+          300
+        );
+        setTimeout(function(){
+          $('.sidebar').css('display','none');
+          $('.sidebar-bg').css('display','none');
+        },
+          300
+        );
+      });
+    });
+
+      
+    </script>
   
 </body>
 </html>
