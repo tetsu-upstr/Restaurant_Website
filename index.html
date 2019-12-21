@@ -31,7 +31,7 @@
     
       <div class="wrapper">
         <header class="page-header">
-            <h1><a href="index.html"><img class="logo" src="images/logo.png" alt="home"></a></h1>
+            <h1><a href="index.html"><img class="logo" src="images/logo.png" alt="logo"></a></h1>
                 <nav>
                     <ul class="main-nav">
                     <li class="tel">Tel.06-1234-5678</li> 
@@ -48,13 +48,13 @@
 
       
           <div>
-            <h2 id="top-title" class="page-title">自然派レストラン KITCHEN</h2>
+            <h2 id="main-title" class="shop-name">自然派レストラン KITCHEN</h2>
           </div>
       
-      <section class="lead">
+      <section class="lead-section">
         <div class="wrapper">
           <div class="lead-sentence">
-            <h3 id="top-title" class="sub-title">快適な空間</h3>
+            <h3 id="sub-title" class="sub-title">快適な空間</h3>
             <p id="top-p" class="top-sentence">当店はお客様におくつろぎ頂けるよう、チェア、食器、BGMなど細部にこだわり居心地の良い空間を提供します。</p>
           </div>
           <div class="lead-img">
@@ -63,10 +63,10 @@
         </div>
       </section>
 
-      <section class="lead">
+      <section class="lead-section">
           <div class="wrapper reverse">
             <div class="lead-sentence">
-              <h3 id="top-title" class="sub-title">美味しさへのこだわり</h3>
+              <h3 id="sub-title" class="sub-title">美味しさへのこだわり</h3>
               <p id="top-p" class="top-sentence">当店はいつも新鮮な食材をお客様に提供できるよう、できる限り生産者からの直送にこだわっています。野菜はもちろん、天然魚も産地が特定されているものを使用しています。</p>
             </div>
             <div class="lead-img">
@@ -127,7 +127,7 @@
 
       // ハンバーガーボタン
       jQuery(document).ready(function(){
-      /*open*/
+      /* open */
       $('.header__icon').on('click',function(){
         $('.sidebar').css(
           'display','block'
@@ -144,7 +144,8 @@
           300
         )
       });
-      /*close*/
+
+      /* close */
       $('.sidebar__icon').on('click',function(){
         $('.sidebar').animate({
           left:'-200px'
@@ -165,17 +166,18 @@
       });
     });
 
-      // スクロールボタン
+      // fadeIn
       $(function() {
         $('#top-logo').fadeIn(800);
         $('#top-title').fadeIn(800);
         $('#top-p').fadeIn(800);
       });
 
+      // scroll button
       $(function() {
         var topBtn = $('#top');    
         topBtn.hide();
-        //スクロールが100に達したらボタン表示
+        // スクロールが100に達したらボタン表示
         $(window).scroll(function () {
             if ($(this).scrollTop() > 100) {
                 topBtn.fadeIn();
@@ -183,7 +185,7 @@
                 topBtn.fadeOut();
             }
         });
-        //スクロールしてトップ
+        // スクロールしてトップ
         topBtn.click(function () {
             $('body,html').animate({
                 scrollTop: 0

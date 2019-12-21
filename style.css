@@ -1,6 +1,6 @@
 /*header*/
+
 .header {
-  
   height:48px;
   width:100%;
   position:fixed;
@@ -13,10 +13,12 @@
   box-sizing:border-box;
   z-index:2;
 }
+
 .header__icon {
   color: #4C4C4C; 
   font-size:28px;
 }
+
 .content {
   width:100vw;
   height:calc(100vh - 50px);
@@ -27,6 +29,7 @@
   padding:0 16px;
   box-sizing:border-box;
 }
+
 .ttl {
   margin-top:32px;
   margin-bottom:16px;
@@ -34,6 +37,7 @@
 
 
 /*sidebar*/
+
 .sidebar {
   padding:16px;
   width:220px;
@@ -47,15 +51,18 @@
   box-sizing:border-box;
   display:none;
 }
+
 .sidebar__inner {
   display:flex;
   justify-content:space-between;
   align-items:center;
 }
+
 .sidebar__icon {
   font-size:28px;
   color:#654;
 }
+
 .sidebar__txt {
   font-size:18px;
   margin-top:16px;
@@ -161,7 +168,7 @@ a:hover::after {
 
 
 /* HOME */
-.lead .wrapper{
+.lead-section .wrapper{
   display: flex;
   margin: 30px auto;
 }
@@ -170,7 +177,7 @@ a:hover::after {
   flex-flow: row-reverse;
 }
 
-.page-title {
+.shop-name {
   font-weight: bold;
   font-size: 2em;
   letter-spacing: 3px;
@@ -178,10 +185,6 @@ a:hover::after {
   margin: 50px auto;
   /* display:none; */
 }
-
-/* .lead-img {
-  width: 400px;
-} */
 
 .sub-title {
   font-size: 1.5em;
@@ -396,9 +399,10 @@ textarea[name=contact] {
 	border-radius: 5px;
 }
 
-/* smart phone */
+/* responsive */
+
 @media (max-width: 600px) {
-  .page-title {
+  .shop-name {
       font-size: 2.5rem;
   }
   .page-header {
@@ -407,6 +411,7 @@ textarea[name=contact] {
   }
 
   /* HEADER */
+
   .main-nav {
       font-size: 1rem;
       margin-top: 10px;
@@ -426,12 +431,12 @@ textarea[name=contact] {
       margin-top: 40%;
   }
 
-  .lead .wrapper{
+  .lead-section .wrapper{
     max-width: 100%;
     flex-direction: column;
   }
 
-  .page-title {
+  .shop-name {
     font-size: 3vw;
     letter-spacing: 0.2px;
   }
@@ -454,6 +459,7 @@ textarea[name=contact] {
   }
 
   /* MENU */
+
   .menu-content {
       margin-top: 5%;
   }
@@ -465,6 +471,7 @@ textarea[name=contact] {
   }
 
   /* form */
+
   input[type="text"],
   input[type="email"],
   textarea {
@@ -472,6 +479,7 @@ textarea[name=contact] {
   }
 
   /* map */
+
   .location .wrapper {
     margin: 0 auto;
     flex-direction: column;
