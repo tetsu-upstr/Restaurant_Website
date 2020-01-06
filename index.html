@@ -48,10 +48,10 @@
 
       
           <div>
-            <h2 id="main-title" class="shop-name">自然派レストラン KITCHEN</h2>
+            <h2 id="main-title" class="shop-name fadein">自然派レストラン KITCHEN</h2>
           </div>
       
-      <section class="lead-section">
+      <section class="lead-section fadein">
         <div class="wrapper">
           <div class="lead-sentence">
             <h3 id="sub-title" class="sub-title">快適な空間</h3>
@@ -63,7 +63,7 @@
         </div>
       </section>
 
-      <section class="lead-section">
+      <section class="lead-section fadein">
           <div class="wrapper reverse">
             <div class="lead-sentence">
               <h3 id="sub-title" class="sub-title">美味しさへのこだわり</h3>
@@ -122,7 +122,7 @@
 
     <p id="top" class="top-button"><a href="#wrap">page top<br><i class="fas fa-angle-up fa-3x"></i></a></p>
 
-    <script src="http://code.jquery.com/jquery-1.12.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
     <script>
 
       // ハンバーガーボタン
@@ -167,11 +167,19 @@
     });
 
       // fadeIn
-      $(function() {
-        $('#top-logo').fadeIn(800);
-        $('#top-title').fadeIn(800);
-        $('#top-p').fadeIn(800);
+      $(window).scroll(function (){
+
+          $('.fadein').each(function(){
+            var elemPos = $(this).offset().top,
+                scroll = $(window).scrollTop(),
+                windowHeight = $(window).height();
+                
+              if (scroll > elemPos - windowHeight + 100){
+                  $(this).addClass('scrollin');
+                }
+          });
       });
+
 
       // scroll button
       $(function() {

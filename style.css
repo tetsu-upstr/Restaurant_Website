@@ -1,5 +1,39 @@
-/*header*/
+/* 共通部分 */
+html {
+  font-size: 100%;
+}
 
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #4C4C4C; 
+}
+
+h1, h2, h3, p, label {
+  font-family: 'Noto Serif JP', serif;
+  color: #4C4C4C;  
+}
+
+.sidebar__txt, .sidebar__ttl {
+  font-family: 'Jaldi', sans-serif;
+  color: #4C4C4C;  
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 4%;
+  text-align: center;
+}
+
+/*header*/
 .header {
   height:48px;
   width:100%;
@@ -37,7 +71,6 @@
 
 
 /*sidebar*/
-
 .sidebar {
   padding:16px;
   width:220px;
@@ -80,40 +113,16 @@
   display:none;
 }
 
-
-/* 共通部分 */
-html {
-  font-size: 100%;
+/* fadeIn scrollIn */
+.fadein {
+  opacity: 0;
+  transform : translate(0, 50px);
+  transition : all 1500ms;
 }
 
-body {
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-  color: #4C4C4C; 
-}
-
-h1, h2, h3, p, label {
-  font-family: 'Noto Serif JP', serif;
-  color: #4C4C4C;  
-}
-
-.sidebar__txt, .sidebar__ttl {
-  font-family: 'Jaldi', sans-serif;
-  color: #4C4C4C;  
-}
-
-img {
-  max-width: 100%;
-}
-
-.wrapper {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 4%;
-  text-align: center;
+.fadein.scrollin{
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
 /* top image */
@@ -183,7 +192,6 @@ a:hover::after {
   letter-spacing: 3px;
   text-align: center;
   margin: 50px auto;
-  /* display:none; */
 }
 
 .sub-title {
@@ -193,11 +201,9 @@ a:hover::after {
 .top-sentence {
   line-height: 30px;
   margin: 35px;  
-  /* display:none; */
 }
 
 /* map */
-
 .location .wrapper {
   margin-top: 48px;
   display: flex;
@@ -207,17 +213,18 @@ a:hover::after {
 .location-info {
   width: 22%;
 }
+
 .location-info p {
   padding: 12px 10px;
   text-align: left;
   color: #4C4C4C;
 }
+
 .google-map {
   width: 74%;
 }
 
 /* Menu */
-
 .menu-content {
   color: #4C4C4C;  
   text-align: center;
@@ -227,7 +234,6 @@ a:hover::after {
 .menu-title {
   font-size: 16px;
 }
-
 
 .grid {
   display: grid;
@@ -254,7 +260,6 @@ a:hover::after {
 }
 
 /* contact form  */
-
 .form-wrapper {
   width: 100%;
   margin: 0 5px;
@@ -276,6 +281,7 @@ label {
   margin-bottom: 10px;
   display: block;
 }
+
 input[type="text"],
 input[type="email"],
 input[type="message-title"],
@@ -286,17 +292,20 @@ textarea {
   padding: 10px;
   font-size: 1rem;
 }
+
 input[type="text"],
 input[type="email"],
 input[type="message-title"] {
   width: 100%;
   max-width: 240px;
 }
+
 textarea {
   width: 100%;
   max-width: 480px;
   height: 6rem;
 }
+
 input[type="submit"] {
   border: none;
   cursor: pointer;
@@ -343,7 +352,6 @@ input[type="submit"] {
 }
 
 /* footer */
-
 footer {
   text-align: center;
   padding: 26px 0;
@@ -379,7 +387,6 @@ footer p {
  }
 
 /* error messeage */
-
 textarea[name=contact] {
 	padding: 5px 10px;
 	width: 60%;
@@ -399,8 +406,9 @@ textarea[name=contact] {
 	border-radius: 5px;
 }
 
-/* responsive */
 
+
+/* responsive */
 @media (max-width: 600px) {
   .shop-name {
       font-size: 2.5rem;
@@ -410,8 +418,7 @@ textarea[name=contact] {
       align-items: center;
   }
 
-  /* HEADER */
-
+  /* responsive HEADER */
   .main-nav {
       font-size: 1rem;
       margin-top: 10px;
@@ -425,8 +432,7 @@ textarea[name=contact] {
     display: none;
   }
 
-  /* HOME */
-  
+  /* responsive HOME */
   .home-content {
       margin-top: 40%;
   }
@@ -449,7 +455,6 @@ textarea[name=contact] {
     font-size: 0.5em;
     line-height: 15px;
     margin: 20px;  
-    /* display:none; */
   }
   
   .lead-img {
@@ -458,28 +463,24 @@ textarea[name=contact] {
     height: auto;
   }
 
-  /* MENU */
-
+  /* responsive MENU */
   .menu-content {
       margin-top: 5%;
   }
 
-  /* CONTACT */
-
+  /* responsive CONTACT */
   .form-wrapper {
     width: 300px;
   }
 
-  /* form */
-
+  /* responsive form */
   input[type="text"],
   input[type="email"],
   textarea {
       max-width: 100%;
   }
 
-  /* map */
-
+  /* responsive map */
   .location .wrapper {
     margin: 0 auto;
     flex-direction: column;
