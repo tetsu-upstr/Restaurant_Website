@@ -2,189 +2,109 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="サイトの説明文">
+  <meta name="description" content="このサイトは、架空のカフェ・レストランサイトです。">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Jaldi|Noto+Serif+JP&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   <link rel="icon" href="images/favicon.png">
   <title>demo restaurant</title>
+  <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+  <script src="js/main.js" defer></script>
 </head>
 
 <body>
 
-        <header class="header">
-                <i class="fas fa-bars header__icon"></i>
-        </header>
-              
-        <aside class="sidebar">
-            <div class="sidebar__inner">
-                <h2 class="sidebar__ttl">Site Menu</h2>
-                <i class="fas fa-times-circle sidebar__icon"></i>
-            </div>
-            <p class="sidebar__txt"><a href="index.html">Home</a></p>
-            <p class="sidebar__txt"><a href="menu.html">Menu</a></p>
-            <p class="sidebar__txt"><a href="contact.php">Contact</a></p>
-        </aside>
-        <div class="sidebar-bg"></div>
+    <div class="c-btn-hamburger">
+        <i class="fas fa-bars header__icon"></i>
+    </div>
+      
+      <aside class="l-sidebar">
+        <div class="l-sidebar__inner">
+          <h2 class="l-sidebar__ttl">Site Menu</h2>
+          <i class="fas fa-times-circle sidebar__icon"></i>
+        </div>
+        <p class="l-sidebar__txt"><a href="index.html">Home</a></p>
+        <p class="l-sidebar__txt"><a href="menu.html">Menu</a></p>
+        <p class="l-sidebar__txt"><a href="contact.php">Contact</a></p>
+      </aside>
+      <div class="l-sidebar-bg"></div>
     
-      <div class="wrapper">
-        <header class="page-header">
-            <h1><a href="index.html"><img class="logo" src="images/logo.png" alt="home"></a></h1>
-              <nav>
-                  <ul class="main-nav">
-                  <li class="tel">Tel.06-1234-5678</li>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="menu.html">Menu</a></li>
-                  <li><a href="contact.php">Contact</a></li>
-                  </ul>
-              </nav>
+      <div class="l-wrapper">
+        <header class="page-header l-flex">
+            <h1><a href="index.html"><img class="p-header__logo" src="images/logo.png" alt="logo"></a></h1>
+                <nav>
+                    <ul class="p-header＿_navi l-flex">
+                      <li class="tel">Tel.06-1234-5678</li> 
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="menu.html">Menu</a></li>
+                      <li><a href="contact.php">Contact</a></li>
+                    </ul>
+                </nav>
         </header>
 
       </div>
 
-        <div class="menu-content">
+        <div class="l-menu-content">
           
-            <p class="menu-title">当レストランおすすめメニュー</p>
-        
-
-        
-            <div class="wrapper grid">
-                <div class="item">
+            <h2 class="p-menu-title">当レストランおすすめメニュー</h2>
+              
+            <div class="l-wrapper l-grid">
+                <div class="c-grid__item">
                     <img src="images/menu1.jpg" alt="">
-                    <p>写真キャプション写真キャプション</p>
+                    <p>特製パンケーキ</p>
                 </div>
-                <div class="item">
+                <div class="c-grid__item">
                     <img src="images/menu2.jpg" alt="">
-                    <p>写真キャプション写真キャプション</p>
+                    <p>ブレンドコーヒー</p>
                 </div>
-                <div class="item">
+                <div class="c-grid__item">
                     <img src="images/menu3.jpg" alt="">
-                    <p>写真キャプション写真キャプション</p>
+                    <p>窯焼きピザ</p>
                 </div>
-                <div class="item">
+                <div class="c-grid__item">
                     <img src="images/menu4.jpg" alt="">
-                    <p>写真キャプション写真キャプション</p>
+                    <p>具沢山グラタン</p>
                 </div>
-                <div class="item">
+                <div class="c-grid__item">
                     <img src="images/menu5.jpg" alt="">
-                    <p>写真キャプション写真キャプション</p>
+                    <p>日替わりケーキ</p>
                 </div>
-                <div class="item">
+                <div class="c-grid__item">
                     <img src="images/menu6.jpg" alt="">
-                    <p>写真キャプション写真キャプション</p>
+                    <p>てんこ盛りフルーツタルト</p>
                 </div>
-                <div class="item">
+                <div class="c-grid__item">
                     <img src="images/menu7.jpg" alt="">
-                    <p>写真キャプション写真キャプション</p>
+                    <p>こんがりサンドイッチセット</p>
                 </div>
-                <div class="item">
+                <div class="c-grid__item">
                     <img src="images/menu8.jpg" alt="">
-                    <p>写真キャプション写真キャプション</p>
+                    <p>シナモンケーキ</p>
                 </div>
-                <div class="item">
+                <div class="c-grid__item">
                     <img src="images/menu9.jpg" alt="">
-                    <p>写真キャプション写真キャプション</p>
+                    <p>贅沢チョコアイス</p>
                 </div>
             </div><!-- /.grid -->
           
         </div>
 
-    <footer>
-        <div class="wrapper">
-
-          <div class="circle">
-            <a href="https://www.facebook.com/">
-              <i class="icon fab fa-facebook-f"></i>
-            </a>
+        <footer>
+          <div class="l-footer">
+              <div class="c-btn c-btn--circle">
+                <a href="https://www.facebook.com/">
+                  <i class="icon fab fa-facebook-f"></i>
+                </a>
+              </div>
+              <div class="c-btn c-btn--circle">
+                  <a href="https://www.instagram.com/">
+                    <i class="icon fab fa-instagram"></i>
+                  </a>
+                </div>
+                <p><small class="p-copyright">&copy; Demo restaurant site</small></p>
           </div>
-
-          <div class="circle">
-              <a href="https://www.instagram.com/">
-                <i class="icon fab fa-instagram"></i>
-              </a>
-            </div>
-
-        </div>
-
-        <p><small>&copy; Demo restaurant site</small></p>
-
-    </footer>
-
-    <p id="top" class="top-button"><a href="#wrap">page top<br><i class="fas fa-angle-up fa-3x"></i></a></p>
-
-    <script src="http://code.jquery.com/jquery-1.12.1.min.js"></script>
-    <script>
-
-      // ハンバーガーボタン
-      jQuery(document).ready(function(){
-      /*open*/
-      $('.header__icon').on('click',function(){
-        $('.sidebar').css(
-          'display','block'
-        ).animate({
-          left:'0'
-        }, 
-          300
-        );
-        $('.sidebar-bg').css(
-          'display','block'
-        ).animate({
-          opacity:'0.5'
-        },
-          300
-        )
-      });
-      /*close*/
-      $('.sidebar__icon').on('click',function(){
-        $('.sidebar').animate({
-          left:'-200px'
-        },
-          300
-        );
-        $('.sidebar-bg').animate({
-          opacity:'0'
-        },
-          300
-        );
-        setTimeout(function(){
-          $('.sidebar').css('display','none');
-          $('.sidebar-bg').css('display','none');
-        },
-          300
-        );
-      });
-    });
-
-      // スクロールボタン
-      $(function() {
-        $('#top-logo').fadeIn(800);
-        $('#top-title').fadeIn(800);
-        $('#top-p').fadeIn(800);
-      });
-
-      $(function() {
-        var topBtn = $('#top');    
-        topBtn.hide();
-        //スクロールが100に達したらボタン表示
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 100) {
-                topBtn.fadeIn();
-            } else {
-                topBtn.fadeOut();
-            }
-        });
-        //スクロールしてトップ
-        topBtn.click(function () {
-            $('body,html').animate({
-                scrollTop: 0
-            }, 500);
-            return false;
-        });
-      });
-
-    </script>
+      </footer>
   
 </body>
 </html>

@@ -4,204 +4,120 @@
   <meta charset="UTF-8">
   <meta name="description" content="このサイトは、架空のカフェ・レストランサイトです。">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Jaldi|Noto+Serif+JP&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   <link rel="icon" href="images/favicon.png">
   <title>demo restaurant</title>
+  <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+  <script src="js/main.js" defer></script>
 </head>
 
 <body>
-
-    <header class="header">
-        <i class="fas fa-bars header__icon"></i>
-    </header>
-      
-      <aside class="sidebar">
-        <div class="sidebar__inner">
-          <h2 class="sidebar__ttl">Site Menu</h2>
-          <i class="fas fa-times-circle sidebar__icon"></i>
-        </div>
-        <p class="sidebar__txt"><a href="index.html">Home</a></p>
-        <p class="sidebar__txt"><a href="menu.html">Menu</a></p>
-        <p class="sidebar__txt"><a href="contact.php">Contact</a></p>
-      </aside>
-      <div class="sidebar-bg"></div>
+  <sec/section class="l-container">
+    <div class="c-btn-hamburger">
+      <i class="fas fa-bars header__icon"></i>
+  </div>
     
-      <div class="wrapper">
-        <header class="page-header">
-            <h1><a href="index.html"><img class="logo" src="images/logo.png" alt="logo"></a></h1>
-                <nav>
-                    <ul class="main-nav">
+    <aside class="l-sidebar">
+      <div class="l-sidebar__inner">
+        <h2 class="l-sidebar__ttl">Site Menu</h2>
+        <i class="fas fa-times-circle sidebar__icon"></i>
+      </div>
+      <p class="l-sidebar__txt"><a href="index.html">Home</a></p>
+      <p class="l-sidebar__txt"><a href="menu.html">Menu</a></p>
+      <p class="l-sidebar__txt"><a href="contact.php">Contact</a></p>
+    </aside>
+    <div class="l-sidebar-bg"></div>
+  
+    <div class="l-wrapper">
+      <header class="page-header l-flex">
+          <h1><a href="index.html"><img class="p-header__logo" src="images/logo.png" alt="logo"></a></h1>
+              <nav>
+                  <ul class="p-header＿_navi l-flex">
                     <li class="tel">Tel.06-1234-5678</li> 
                     <li><a href="index.html">Home</a></li>
                     <li><a href="menu.html">Menu</a></li>
                     <li><a href="contact.php">Contact</a></li>
-                    </ul>
-                </nav>
-        </header>
+                  </ul>
+              </nav>
+      </header>
 
+    </div>
+
+    <div class="l-big-bg p-big-bg l-justify-center">
+      <img class="p-logo-white js-fadein" src="images/logo-white.png" alt="logo">
+      <p class="p-title l-block js-fadein">Organic restaurant kitchen</p>
+    </div>
+   
+        <div>
+          <h2 id="main-title" class="shop-name js-fadein">自然派レストラン KITCHEN</h2>
+        </div>
+    
+    <section class="l-lead-section js-fadein">
+      <div class="l-wrapper l-flex">
+        <div class="lead-sentence">
+          <h3 id="sub-title" class="sub-title">快適な空間</h3>
+          <p id="top-p" class="top-sentence">当店はお客様におくつろぎ頂けるよう、チェア、食器、BGMなど細部にこだわり居心地の良い空間を提供します。</p>
+        </div>
+        <div class="lead-img">
+          <img src="images/coffee.png" alt="コーヒー豆">
+        </div>
       </div>
+    </section>
 
-      <img class="big-bg" src="images/main-bg.jpg" alt="美味しい料理の写真">
-
-      
-          <div>
-            <h2 id="main-title" class="shop-name fadein">自然派レストラン KITCHEN</h2>
-          </div>
-      
-      <section class="lead-section fadein">
-        <div class="wrapper">
+    <section class="l-lead-section js-fadein">
+        <div class="l-wrapper l-flex l-reverse">
           <div class="lead-sentence">
-            <h3 id="sub-title" class="sub-title">快適な空間</h3>
-            <p id="top-p" class="top-sentence">当店はお客様におくつろぎ頂けるよう、チェア、食器、BGMなど細部にこだわり居心地の良い空間を提供します。</p>
+            <h3 id="sub-title" class="sub-title">美味しさへのこだわり</h3>
+            <p id="top-p" class="top-sentence">当店はいつも新鮮な食材をお客様に提供できるよう、できる限り生産者からの直送にこだわっています。野菜はもちろん、天然魚も産地が特定されているものを使用しています。</p>
           </div>
           <div class="lead-img">
-            <img src="images/coffee.png" alt="コーヒー豆">
-          </div>
+                <img src="images/pasta.png" alt="パスタ">
+            </div>
         </div>
       </section>
 
-      <section class="lead-section fadein">
-          <div class="wrapper reverse">
-            <div class="lead-sentence">
-              <h3 id="sub-title" class="sub-title">美味しさへのこだわり</h3>
-              <p id="top-p" class="top-sentence">当店はいつも新鮮な食材をお客様に提供できるよう、できる限り生産者からの直送にこだわっています。野菜はもちろん、天然魚も産地が特定されているものを使用しています。</p>
-            </div>
-            <div class="lead-img">
-                  <img src="images/pasta.png" alt="パスタ">
-              </div>
+      <section class="l-wrapper l-flex">
+          <div class="p-location__info">
+              <p>
+                  Demo restaurant<br>
+                  <br>
+                  住所： 大阪府大阪市<br>
+                  〇〇区〇〇〇〇 123-45<br>
+                  〇〇〇〇ビル<br>
+                  電話： 06-1234-5678<br>
+                  営業時間： 10:00-20:00<br>
+                  定休日：木曜
+              </p>
           </div>
-        </section>
 
-
-
-
-    <section class="location">
-        <div class="wrapper">
-            <div class="location-info">
-                <p>
-                    Demo restaurant<br>
-                    <br>
-                    住所： 大阪府大阪市<br>
-                    〇〇区〇〇〇〇 123-45<br>
-                    〇〇〇〇ビル<br>
-                    電話： 06-1234-5678<br>
-                    営業時間： 10:00-20:00<br>
-                    定休日：木曜
-                </p>
-            </div>
-            <div class="google-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3716.097101151596!2d135.4963307637419!3d34.69988554952322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e68d67a3914d%3A0xbaadb7abb9c8cc68!2z5aSn6Ziq5qKF55Sw6aeF!5e0!3m2!1sja!2sjp!4v1575776380183!5m2!1sja!2sjp" 
-                 width="800" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-            </div>
-        </div>
-    </section>
-
+          <div class="p-map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3716.097101151596!2d135.4963307637419!3d34.69988554952322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e68d67a3914d%3A0xbaadb7abb9c8cc68!2z5aSn6Ziq5qKF55Sw6aeF!5e0!3m2!1sja!2sjp!4v1575776380183!5m2!1sja!2sjp" 
+               width="800" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          </div>
+      </section>
+  
     <footer>
-        <div class="wrapper">
-
-          <div class="circle">
-            <a href="https://www.facebook.com/">
-              <i class="icon fab fa-facebook-f"></i>
-            </a>
-          </div>
-
-          <div class="circle">
-              <a href="https://www.instagram.com/">
-                <i class="icon fab fa-instagram"></i>
+        <div class="l-footer">
+            <div class="c-btn c-btn--circle">
+              <a href="https://www.facebook.com/">
+                <i class="icon fab fa-facebook-f"></i>
               </a>
             </div>
-
+            <div class="c-btn c-btn--circle">
+                <a href="https://www.instagram.com/">
+                  <i class="icon fab fa-instagram"></i>
+                </a>
+              </div>
+              <p><small class="p-copyright">&copy; Demo restaurant site</small></p>
         </div>
-
-        <p><small>&copy; Demo restaurant site</small></p>
-
     </footer>
 
-    <p id="top" class="top-button"><a href="#wrap">page top<br><i class="fas fa-angle-up fa-3x"></i></a></p>
+  </div>
 
-    <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
-    <script>
+    <!-- スクロールボタン -->
+    <p id="js-scrollTop" class="c-btn c-btn--scroll"><a href="#wrap">page top<br><i class="fas fa-angle-up fa-3x"></i></a></p>
 
-      // ハンバーガーボタン
-      jQuery(document).ready(function(){
-      /* open */
-      $('.header__icon').on('click',function(){
-        $('.sidebar').css(
-          'display','block'
-        ).animate({
-          left:'0'
-        }, 
-          300
-        );
-        $('.sidebar-bg').css(
-          'display','block'
-        ).animate({
-          opacity:'0.5'
-        },
-          300
-        )
-      });
-
-      /* close */
-      $('.sidebar__icon').on('click',function(){
-        $('.sidebar').animate({
-          left:'-200px'
-        },
-          300
-        );
-        $('.sidebar-bg').animate({
-          opacity:'0'
-        },
-          300
-        );
-        setTimeout(function(){
-          $('.sidebar').css('display','none');
-          $('.sidebar-bg').css('display','none');
-        },
-          300
-        );
-      });
-    });
-
-      // fadeIn
-      $(window).scroll(function (){
-
-          $('.fadein').each(function(){
-            var elemPos = $(this).offset().top,
-                scroll = $(window).scrollTop(),
-                windowHeight = $(window).height();
-                
-              if (scroll > elemPos - windowHeight + 100){
-                  $(this).addClass('scrollin');
-                }
-          });
-      });
-
-
-      // scroll button
-      $(function() {
-        var topBtn = $('#top');    
-        topBtn.hide();
-        // スクロールが100に達したらボタン表示
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 100) {
-                topBtn.fadeIn();
-            } else {
-                topBtn.fadeOut();
-            }
-        });
-        // スクロールしてトップ
-        topBtn.click(function () {
-            $('body,html').animate({
-                scrollTop: 0
-            }, 500);
-            return false;
-        });
-      });
-
-    </script>
 </body>
 </html>

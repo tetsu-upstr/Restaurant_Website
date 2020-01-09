@@ -1,0 +1,149 @@
+
+.l-container {
+  width: 100%;
+}
+
+.l-wrapper {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 0 4%;
+  text-align: center;
+}
+
+
+.l-big-bg {
+  width: 100%;
+  height: 480px;
+}
+
+/* Menu */
+.l-menu-content {
+  text-align: center;
+  p {
+    font-size: 12px;
+  }
+}
+
+
+.l-footer {
+  text-align: center;
+  padding: 26px 0;
+  p {
+    margin-top: 10px;
+    font-family: 'Jaldi', sans-serif;
+    font-size: 0.875rem;
+  }
+}
+
+/*sidebar*/
+.l-sidebar {
+  padding:16px;
+  width:220px;
+  height:100vh;
+  position:fixed;
+  background-color:#fff;
+  top:0;
+  left:-220px;
+  z-index:4;
+  box-shadow:0 0 10px rgba(0,0,0,0.5);
+  box-sizing:border-box;
+  display:none;
+}
+
+.l-sidebar__inner {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.sidebar__icon {
+  font-size:28px;
+  color:#654;
+}
+
+.l-sidebar__txt {
+  font-size:18px;
+  margin-top:16px;
+  margin-left:8px;
+}
+.l-sidebar-bg {
+  background-color:#558;
+  width:100vw;
+  height:100vh;
+  opacity:0;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:3;
+  display:none;
+}
+
+// section
+.l-lead-section .wrapper{
+  display: flex;
+  margin: 30px auto;
+}
+
+// 配置
+.l-flex {
+  display: flex;
+}
+
+.l-justify-left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.l-justify-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.l-justify-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.l-direction-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.l-reverse {
+  flex-flow: row-reverse;
+}
+
+.l-relative {
+  position: relative;
+}
+
+.l-absolute {
+  position: absolute;
+}
+
+.centering {
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.l-block {
+  display: block;
+}
+
+.l-grid {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top: 6%;
+  margin-bottom: 50px;
+}
+
+// サイズ
+.l-w25   { width: 25%;   }
+.l-w50   { width: 50%;   }
+.l-w100p { width: 100%;  }
+.l-h100p { height: 100%; }

@@ -1,0 +1,142 @@
+/* header */
+.p-header＿_logo {
+    width: 120px;
+    margin-left: 20px;
+  }
+
+.p-header＿_navi {
+font-size: 1.1rem;
+margin-top: 32px;
+list-style: none;
+    li{
+    margin-left: 32px;
+    }
+}
+
+.page-header {
+    justify-content: space-between;
+}
+
+// button
+.c-btn {
+    text-align: center;
+    &:hover{
+        cursor: pointer; 
+    }
+}
+
+.c-btn--scroll {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 77%;
+    background: #666;
+    width: 100px;
+    padding: 10px 0;
+    border-radius: 5px;
+    a {
+        color: #fff;
+    }
+    &:hover {
+        background: #999;
+    }
+}
+
+.c-btn--circle {
+    display: inline-block; 
+    height:50px;
+    width:50px;
+    border-radius:50%;
+    line-height:50px;
+    margin: 0 8px;
+    background-color: #fff;
+    -webkit-filter:drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
+    -moz-filter:drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
+    -ms-filter:drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
+    filter:drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
+        &:hover {
+        transform: translateY(-0.5em);
+        transition-duration: 0.5s;
+        }
+   }
+  
+
+.c-btn-hamburger {
+    height:48px;
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    padding:0 16px;
+    box-sizing:border-box;
+    z-index:2;
+}
+  
+  .header__icon {
+    color: #4C4C4C; 
+    font-size:28px;
+  }
+
+
+.c-btn-submit {
+    font-size: 1.2rem;
+    background: #4C4C4C;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 8px 24px;
+    margin-right: 8px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+// top img
+.p-big-bg {
+    width: 100%;
+    background-image: url('../images/main-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+.p-title {
+    font-size: 50px;
+    color: #fff;
+}
+
+// メニュー
+
+.p-menu-title {
+    font-size: 16px;
+  }
+
+.c-grid__item img {
+    height: 300px;
+    width: 300px;
+    -webkit-filter:drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.5));
+    -moz-filter:drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.5));
+    -ms-filter:drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.5));
+    filter:drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.5));
+    object-fit: cover; /* 画像トリミング */
+    &:hover {
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+        transform: translateY(-10px);
+        transition-duration: 0.5s;
+      }
+  }
+
+//   Googleマップ
+.p-map {
+    width: 74%;
+}
+  
+.p-location__info {
+    width: 22%;
+    p {
+      padding: 12px 10px;
+      text-align: left;
+    }
+  }
+  
