@@ -1,5 +1,4 @@
 <?php
-
   // var_dump($sanitize_POST);
 
   $page_flag = 0;
@@ -100,47 +99,59 @@ if( !empty($_POST) ) {
       $error[] = "お問い合わせ内容は必須項目です。";
     }
     
-
     return $error;
   }
   
 ?>
 
-
-
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="サイトの説明文">
+  <meta name="description" content="このサイトは、架空のカフェ・レストランサイトです。">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Jaldi|Noto+Serif+JP&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   <link rel="icon" href="images/favicon.png">
   <title>demo restaurant</title>
+  <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+  <script src="js/main.js" defer></script>
 </head>
+
+<div class="c-btn-hamburger">
+        <i class="fas fa-bars header__icon"></i>
+    </div>
+      
+      <aside class="l-sidebar">
+        <div class="l-sidebar__inner">
+          <h2 class="l-sidebar__ttl">Site Menu</h2>
+          <i class="fas fa-times-circle sidebar__icon"></i>
+        </div>
+        <p class="l-sidebar__txt"><a href="index.html">Home</a></p>
+        <p class="l-sidebar__txt"><a href="menu.html">Menu</a></p>
+        <p class="l-sidebar__txt"><a href="contact.php">Contact</a></p>
+      </aside>
+      <div class="l-sidebar-bg"></div>
 
 <body>
     
-      <div class="wrapper">
-        <header class="page-header">
-            <h1><a href="index.html"><img class="logo" src="images/logo.png" alt="home"></a></h1>
-                <nav>
-                        <ul class="main-nav">
-                        <li class="tel">Tel.06-1234-5678</li>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="menu.html">Menu</a></li>
-                        <li><a href="contact.php">Contact</a></li>
-                        </ul>
-                </nav>
+      <div class="l-wrapper">
+        <header class="page-header l-flex">
+          <h1><a href="index.html"><img class="p-header__logo" src="images/logo.png" alt="logo"></a></h1>
+              <nav>
+                  <ul class="p-header＿_navi l-flex">
+                    <li class="tel">Tel.06-1234-5678</li> 
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                  </ul>
+              </nav>
         </header>
 
       </div>
 
-      <div class="wrapper">
+      <div class="l-wrapper">
         <div class="form-wrapper">
               <h1 class="contact-title">お問い合わせ</h1>
   
@@ -168,8 +179,8 @@ if( !empty($_POST) ) {
                   <p>以下の内容でよろしければ、送信をお願いします。</p>
   
                   <!-- POST入力値の受け渡し -->
-                  <input type="submit" class="button" name="btn_back" value="戻る">
-                  <input type="submit" class="button" name="btn_submit" value="確認して送信">
+                  <input type="submit" class="c-btn-submit" name="btn_back" value="戻る">
+                  <input type="submit" class="c-btn-submit" name="btn_submit" value="確認して送信">
                   <input type="hidden" name="your_name" value="<?php echo $sanitize_POST['your_name']; ?>">
                   <input type="hidden" name="email" value="<?php echo $sanitize_POST['email']; ?>">
                   <input type="hidden" name="message-title" value="<?php echo $sanitize_POST['message-title']; ?>">
@@ -220,7 +231,7 @@ if( !empty($_POST) ) {
                         <textarea id="message" name="your-message" ><?php if( !empty($sanitize_POST['your-message']) ){ echo $sanitize_POST['your-message']; } ?></textarea>
                     </div>
     
-                    <input type="submit" class="button" name="btn_confirm" value="送信">
+                    <input type="submit" class="c-btn-submit" name="btn_confirm" value="送信">
                 </form>
           </div>
       </div>
@@ -229,24 +240,19 @@ if( !empty($_POST) ) {
   
 
     <footer>
-        <div class="wrapper">
-
-          <div class="circle">
-            <a href="https://www.facebook.com/">
-              <i class="icon fab fa-facebook-f"></i>
-            </a>
-          </div>
-
-          <div class="circle">
-              <a href="https://www.instagram.com/">
-                <i class="icon fab fa-instagram"></i>
+        <div class="l-footer">
+            <div class="c-btn c-btn--circle">
+              <a href="https://www.facebook.com/">
+                <i class="icon fab fa-facebook-f"></i>
               </a>
             </div>
-
+            <div class="c-btn c-btn--circle">
+                <a href="https://www.instagram.com/">
+                  <i class="icon fab fa-instagram"></i>
+                </a>
+              </div>
+              <p><small class="p-copyright">&copy; Demo restaurant site</small></p>
         </div>
-
-        <p><small>&copy; Demo restaurant site</small></p>
-
     </footer>
   
 </body>

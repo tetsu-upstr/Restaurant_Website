@@ -1,3 +1,4 @@
+<<<<<<< HEAD:style.css
 /* 共通部分 */
 html {
   font-size: 100%;
@@ -14,9 +15,11 @@ a {
   text-decoration: none;
   color: #4C4C4C; 
 }
+=======
+>>>>>>> FLOCSS:css/style.css
 
-h1, h2, h3, p, label {
-  font-family: 'Noto Serif JP', serif;
+.sidebar__txt, .sidebar__ttl {
+  font-family: 'Jaldi', sans-serif;
   color: #4C4C4C;  
 }
 
@@ -31,10 +34,103 @@ img {
   text-align: center;
 }
 
-/* background image */
+/*header*/
+.header {
+  height:48px;
+  width:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  padding:0 16px;
+  box-sizing:border-box;
+  z-index:2;
+}
+
+.header__icon {
+  color: #4C4C4C; 
+  font-size:28px;
+}
+
+.content {
+  width:100vw;
+  height:calc(100vh - 50px);
+  position:absolute;
+  top:50px;
+  left:0;
+  overflow-y:scroll;
+  padding:0 16px;
+  box-sizing:border-box;
+}
+
+.ttl {
+  margin-top:32px;
+  margin-bottom:16px;
+}
+
+
+/*sidebar*/
+.sidebar {
+  padding:16px;
+  width:220px;
+  height:100vh;
+  position:fixed;
+  background-color:#fff;
+  top:0;
+  left:-220px;
+  z-index:4;
+  box-shadow:0 0 10px rgba(0,0,0,0.5);
+  box-sizing:border-box;
+  display:none;
+}
+
+.sidebar__inner {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.sidebar__icon {
+  font-size:28px;
+  color:#654;
+}
+
+.sidebar__txt {
+  font-size:18px;
+  margin-top:16px;
+  margin-left:8px;
+}
+.sidebar-bg {
+  background-color:#558;
+  width:100vw;
+  height:100vh;
+  opacity:0;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:3;
+  display:none;
+}
+
+/* fadeIn scrollIn */
+.fadein {
+  opacity: 0;
+  transform : translate(0, 50px);
+  transition : all 1500ms;
+}
+
+.fadein.scrollin{
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* top image */
 .big-bg {
 <<<<<<< HEAD
   width: 100%; 
+<<<<<<< HEAD:style.css
   margin: 0;
 =======
   position: relative; /* 配置：親要素 */
@@ -44,16 +140,21 @@ img {
   background-repeat: no-repeat;
   background-image: url(images/main-bg.jpg);
   min-height: 100vh;
+=======
+  margin: 0 auto;
+>>>>>>> FLOCSS:css/style.css
 }
 
 /* header */
 .logo {
   width: 120px;
+  margin-left: 20px;
 }
 
 h1 {
   margin: 0;
 }
+
 
 .main-nav {
   display: flex;
@@ -120,21 +221,28 @@ a:hover::after {
 
 
 /* HOME */
+<<<<<<< HEAD:style.css
 >>>>>>> origin/master
 
 /* HOME */
 .lead .wrapper{
+=======
+.lead-section .wrapper{
+>>>>>>> FLOCSS:css/style.css
   display: flex;
   margin: 30px auto;
 }
 
-.page-title {
+.reverse {
+  flex-flow: row-reverse;
+}
+
+.shop-name {
   font-weight: bold;
   font-size: 2em;
   letter-spacing: 3px;
   text-align: center;
   margin: 50px auto;
-  /* display:none; */
 }
 
 .sub-title {
@@ -143,6 +251,7 @@ a:hover::after {
 
 .top-sentence {
   line-height: 30px;
+<<<<<<< HEAD:style.css
   margin: 35px 35px;  
   /* display:none; */
 }
@@ -168,10 +277,12 @@ a:hover::after {
   background-color: rgba(16, 57, 66, 0.3);
   border-radius: 8px;
 >>>>>>> origin/master
+=======
+  margin: 35px;  
+>>>>>>> FLOCSS:css/style.css
 }
 
 /* map */
-
 .location .wrapper {
   margin-top: 48px;
   display: flex;
@@ -181,17 +292,18 @@ a:hover::after {
 .location-info {
   width: 22%;
 }
+
 .location-info p {
   padding: 12px 10px;
   text-align: left;
   color: #4C4C4C;
 }
+
 .google-map {
   width: 74%;
 }
 
 /* Menu */
-
 .menu-content {
   color: #4C4C4C;  
   text-align: center;
@@ -201,7 +313,6 @@ a:hover::after {
 .menu-title {
   font-size: 16px;
 }
-
 
 .grid {
   display: grid;
@@ -228,7 +339,6 @@ a:hover::after {
 }
 
 /* contact form  */
-
 .form-wrapper {
   width: 100%;
   margin: 0 5px;
@@ -250,6 +360,7 @@ label {
   margin-bottom: 10px;
   display: block;
 }
+
 input[type="text"],
 input[type="email"],
 input[type="message-title"],
@@ -260,17 +371,20 @@ textarea {
   padding: 10px;
   font-size: 1rem;
 }
+
 input[type="text"],
 input[type="email"],
 input[type="message-title"] {
   width: 100%;
   max-width: 240px;
 }
+
 textarea {
   width: 100%;
   max-width: 480px;
   height: 6rem;
 }
+
 input[type="submit"] {
   border: none;
   cursor: pointer;
@@ -294,30 +408,9 @@ input[type="submit"] {
 }
 
 /* page top ボタン */
-.top-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  font-size: 77%;
-}
-.top-button a {
-  font-family: 'Jaldi', sans-serif;
-  background: #666;
-  text-decoration: none;
-  color: #fff;
-  width: 100px;
-  padding: 10px 0;
-  text-align: center;
-  display: block;
-  border-radius: 5px;
-}
-.top-button a:hover {
-  text-decoration: none;
-  background: #999;
-}
+
 
 /* footer */
-
 footer {
   text-align: center;
   padding: 26px 0;
@@ -332,33 +425,21 @@ footer p {
   font-size: 0.875rem;
 }
 
-.circle {
-  display: inline-block; 
-  height:50px;
-  width:50px;
-  border-radius:50%;
-  line-height:50px;
-  text-align:center;
-  margin-left: 8px;
-  background-color: #fff;
-  -webkit-filter:drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
-  -moz-filter:drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
-  -ms-filter:drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
-  filter:drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
- }
 
+<<<<<<< HEAD:style.css
  .circle:hover {
 <<<<<<< HEAD
   transform: translateY(-0.5em);
   transition-duration: 0.5s;
  }
+=======
+>>>>>>> FLOCSS:css/style.css
 
  .icon {
    color: #4C4C4C;
  }
 
 /* error messeage */
-
 textarea[name=contact] {
 	padding: 5px 10px;
 	width: 60%;
@@ -378,10 +459,11 @@ textarea[name=contact] {
 	border-radius: 5px;
 }
 
-/* smart phone
-------------------------------- */
+
+
+/* responsive */
 @media (max-width: 600px) {
-  .page-title {
+  .shop-name {
       font-size: 2.5rem;
   }
   .page-header {
@@ -389,7 +471,7 @@ textarea[name=contact] {
       align-items: center;
   }
 
-  /* HEADER */
+  /* responsive HEADER */
   .main-nav {
       font-size: 1rem;
       margin-top: 10px;
@@ -403,37 +485,55 @@ textarea[name=contact] {
     display: none;
   }
 
-  /* HOME */
+  /* responsive HOME */
   .home-content {
       margin-top: 40%;
   }
-  .page-title {
+
+  .lead-section .wrapper{
+    max-width: 100%;
+    flex-direction: column;
+  }
+
+  .shop-name {
     font-size: 3vw;
     letter-spacing: 0.2px;
   }
-  .sentence {
-    font-size: 3vw;
+
+  .sub-title {
+    font-size: 0.5em;
+  }
+  
+  .top-sentence {
+    font-size: 0.5em;
+    line-height: 15px;
+    margin: 20px;  
+  }
+  
+  .lead-img {
+    width:100%;
+    max-width: 100%;
+    height: auto;
   }
 
-  /* MENU */
+  /* responsive MENU */
   .menu-content {
       margin-top: 5%;
   }
 
-  /* CONTACT */
-
+  /* responsive CONTACT */
   .form-wrapper {
     width: 300px;
   }
 
-  /* form */
+  /* responsive form */
   input[type="text"],
   input[type="email"],
   textarea {
       max-width: 100%;
   }
 
-  /* map */
+  /* responsive map */
   .location .wrapper {
     margin: 0 auto;
     flex-direction: column;
